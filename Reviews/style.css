@@ -1,0 +1,105 @@
+* {
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f7ff;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.underline {
+    border: thick double;
+}
+
+main {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border: thin solid white;
+    height: 600px;
+    box-shadow: 0 0 7px grey;
+}
+
+.writing {
+    text-align: center;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.container {
+    width: 400px;
+}
+
+.container,
+main,
+article,
+.buttons,
+.details {
+    display: grid;
+    place-items: center;
+}
+
+.img-container {
+    width: 200px;
+    height: 200px;
+    display: block;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 50%;
+    display: block;
+}
+
+.buttons * {
+    margin: 10px;
+}
+
+button {
+    color: #056dff;
+    background-color: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    border: thin solid white;
+}
+
+button:active {
+    border: thin solid #056dff;
+    color: white;
+    background-color: #056dff;
+}
+
+#job {
+    color: #056dff;
+}
+
+.suprise {
+    padding: 5px;
+    background-color: #d2def0;
+    border: thin solid #056dff;
+}
+
+.details {
+    margin: 10px;
+}
+
+.details * {
+    margin: 5px;
+}
+
+#map span {
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 50%;
+}
