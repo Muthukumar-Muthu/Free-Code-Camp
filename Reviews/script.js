@@ -98,7 +98,7 @@ function createSpan() {
 
 function supriseButtonClicked() {
     let random = array.length - 1;
-    if (random < 0 || random == -0) random = 0;
+    if (random < 0) random = 0;
     position = Math.round(Math.random() * random);
     console.log(position);
     display(position);
@@ -140,3 +140,52 @@ function mapChange(position) {
         map[i].style.backgroundColor = color;
     }
 }
+
+/*
+                                            Event Delegation
+there are two phases of event delegation
+    1 Bubbling (default)
+    2 Capturing
+Bubbling means event is moved from lowest level element to highest level and the event is fired if it 
+associated with respective elements
+
+Capturing means event is moved from highest level element to lowest level element and the event is fired if it 
+associated with respective elements
+
+<ul>
+    <li><button class="delete"></button></li>
+    <li><button class="delete"></button></li>
+    <li><button class="delete"></button></li>
+    <li><button class="delete"></button></li>
+    <li><button class="delete"></button></li>
+</ul>
+
+Not the acutal code just for reference
+
+    1) add event listenr to ul
+        ul.addevent("click",fun)
+        function fun(e){
+            const child = e.target  --> #1
+        }
+    2) now when we click on the button element, the click event will move to top parent element and if
+        parent has a click event,then it is executed
+    3) now parent ul has a click event. So it fire that function fun.
+    4) the event is moved from button (child) to ul (parent)
+    5) now the e.target will always return the acutal element that trigger that event
+    6) now child will be delete 
+    7) so from this we can understand that
+        we have clicked on button
+        but we dont have any event on that button
+        so the default event delegation is bubbling
+        so if any event is associated with immediate parent (li) will fire
+        since li does not have any click event, nothing fires
+        and the click event associated with immediate parent of li which is ul
+        is fired
+        now ul click event will fire
+        this is an example of bubbling
+    8) we can add cpaturing phase also
+         for that use true as arugment in the addeventlistner
+            addEvent(event-type,function-to-be-triggered,useCaputre) --> to use capture use true 
+                                                                         if not then false (defualt)
+
+*/
