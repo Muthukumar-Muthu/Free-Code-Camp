@@ -1,45 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;700&display=swap");
+:root {
+    --transition: all 0.5s linear;
 }
 
-header,
-header nav ul {
-    display: flex;
-    justify-content: space-between;
+*,
+*::before,
+*::after,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: 3rem;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
 }
 
-ul li,
-.logo,
-.hambuger {
-    font-size: 1em;
-    padding: 5px;
-    margin: 5px;
+a {
+    text-decoration: none;
 }
 
-.hambuger {
-    display: none;
+.page-links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
 }
 
-.none {
-    display: none;
+.page-links li {
+    text-align: center;
 }
 
-@media (max-width: 500px) {
-    header nav ul {
+.page-links li:hover {
+    background-color: rgb(121, 105, 98);
+}
+
+.ham-lines:hover {
+    transition: all 1s linear;
+}
+
+.ham-lines:hover {
+    transform: rotate(90deg);
+}
+
+main {
+    margin: 10px;
+    padding: 10px;
+    background-color: lightsalmon;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    padding: 10px;
+}
+
+.show-links {
+    height: 215px;
+}
+
+@media (min-width: 900px) {
+    .page-links,
+    .social-links {
+        height: fit-content;
+        transition: all 2s linear;
+    }
+    .page-links a,
+    .social-links a {
+        padding: 10px;
+        padding-inline: 20px;
+    }
+    .overall-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .overall-container,
+    .page-links,
+    .social-links {
+        display: flex;
+    }
+    .ham-lines {
         display: none;
     }
-    .hambuger {
-        display: block;
-    }
 }
 
-main ul {
-    background-color: tomato;
-    text-align: center;
+@media (max-width: 1150px) {
+    .social-links {
+        display: none;
+    }
 }
