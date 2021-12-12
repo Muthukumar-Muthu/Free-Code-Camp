@@ -1,0 +1,76 @@
+:root {
+    --trans: all 0.5s linear;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    width: 75%;
+    height: 200px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 0;
+    background-color: transparent;
+}
+
+h1 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    background-color: #54a4ee;
+    color: white;
+    font-weight: bold;
+    transition: var(--trans);
+}
+
+.button:hover {
+    color: #0c5192;
+    background-color: white;
+    border: thin solid #0c5192;
+}
+
+.modal-overlay {
+    position: absolute;
+    display: none;
+    background-color: yellow;
+    top: 10px;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    border: thin solid black;
+    border-radius: 10px;
+}
+
+.modal-overlay h1 {
+    margin: 50px 20px;
+    text-align: center;
+}
+
+.close {
+    font-size: 1.2rem;
+    padding: 10px;
+    float: right;
+}
+
+.toggle {
+    display: block;
+}
+
+.close:hover {
+    transform: scale(2);
+    transition: var(--trans);
+    color: red;
+}
