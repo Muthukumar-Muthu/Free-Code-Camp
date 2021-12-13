@@ -86,7 +86,7 @@ p {
 
 .answer-container {
     background-color: lightblue;
-    transition: max-height 2s;
+    transition: max-height 0.2s linear;
     overflow: hidden;
     max-height: 0;
 }
@@ -94,4 +94,8 @@ p {
 .container {
     border: thin solid black;
     margin-top: 100px;
+}
+
+.toggle {
+    max-height: 200px;
 }
