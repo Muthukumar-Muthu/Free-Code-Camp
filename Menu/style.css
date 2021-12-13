@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.overall-container {
+    display: grid;
+    place-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    letter-spacing: 1.2px;
+}
+
+.title .underline {
+    margin: 10px;
+    width: 100px;
+    height: 5px;
+    background-color: goldenrod;
+}
+
+button {
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    margin-inline: 5px;
+    background-color: transparent;
+    border: thin solid goldenrod;
+    border-radius: 10px;
+    color: goldenrod;
+    transition: all 0.5s linear;
+}
+
+button:hover {
+    color: white;
+    background-color: goldenrod;
+}
+
+.filter-buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 80%;
+    display: grid;
+    place-items: center;
+}
+
+.single-content {
+    width: 95%;
+    max-width: 392px;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+}
+
+img {
+    width: 100%;
+    border: thick solid goldenrod;
+    border-radius: 10px;
+}
+
+.img {
+    width: 100%;
+    max-width: 468px;
+    display: grid;
+    place-items: center;
+    grid-area: img;
+}
+
+.single-content .price-name {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.8px;
+    font-size: 2rem;
+    width: 100%;
+    border-bottom: thin dotted grey;
+}
+
+.price {
+    color: goldenrod;
+    font-size: 2rem;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.name {
+    font-family: monospace;
+    font-weight: bold;
+    color: black;
+    margin: 10px;
+}
+
+.details {
+    padding: 10px;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.price-name-details {
+    max-width: 750px;
+    grid-area: pnd;
+}
+
+.content-container {
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
+
+.toggle {
+    display: none;
+}
+
+@media (min-width: 760px) {
+    .single-content {
+        display: grid;
+        grid-template-columns: 1fr, 2fr;
+        grid-template-areas: "img pnd";
+        gap: 10px;
+        max-width: 768px;
+    }
+    .img {
+        margin-right: 10px;
+        height: 100%;
+    }
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
