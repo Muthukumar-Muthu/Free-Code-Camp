@@ -19,10 +19,10 @@ form.addEventListener("submit", function(e) {
         return false;
     } else {
         showNotification("Item added to list", "green");
-
         if (e.target.lastElementChild.innerText.includes("Submit")) {
             add(input.value);
-
+            //locale storage
+            reloadLocalStorage();
             clearInput();
         }
     }
@@ -35,8 +35,8 @@ form.addEventListener("submit", function(e) {
     if (e.target.lastElementChild.innerText.includes("edit")) {
         remeber.firstElementChild.innerHTML = input.value;
         submit.innerText = "Submit";
-
         showNotification("Value changed", "green");
+        reloadLocalStorage();
         clearInput();
     }
 });
@@ -47,6 +47,8 @@ items.addEventListener("click", function(e) {
 
 clearAll.addEventListener("click", function() {
     items.innerText = "";
+    //localStorage
+    reloadLocalStorage();
     showNotification("Empty list", "red");
 });
 
@@ -93,6 +95,7 @@ function editOrDelete(e) {
         if (value.includes("trash")) {
             const singleContent = e.target.parentElement.parentElement.parentElement;
             singleContent.remove();
+            reloadLocalStorage();
             showNotification("Item removed", "red");
         } else if (value.includes("edit")) {
             const valueToInput =
@@ -102,7 +105,7 @@ function editOrDelete(e) {
             submit.innerText = "edit";
         }
     });
-    // delete buttons
+    // local storage
 }
 
 function showNotification(string, color) {
@@ -121,3 +124,19 @@ function showNotification(string, color) {
         notification.classList.remove("green");
     }, 1000);
 }
+
+function reloadLocalStorage() {
+    let count = 0;
+    localStorage.clear();
+    const contents = document.querySelectorAll(".single-content");
+    contents.forEach(function(value) {
+        localStorage.setItem(count++, value.innerText);
+    });
+    console.log(localStorage);
+}
+
+window.addEventListener("load", function() {
+    for (let key = 0; key < localStorage.length; key++) {
+        add(localStorage.getItem(key));
+    }
+});
