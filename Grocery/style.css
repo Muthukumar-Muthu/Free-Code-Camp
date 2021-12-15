@@ -1,0 +1,126 @@
+body {
+    background-color: hsl(212, 33%, 89%);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 50px;
+    background-color: white;
+    padding: 20px;
+    width: 40%;
+}
+
+.green {
+    color: green;
+    background-color: lightgreen;
+    height: 20px;
+}
+
+.red {
+    color: red;
+    background-color: rgb(221, 180, 180);
+    height: 20px;
+}
+
+.title {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: hsl(205, 86%, 17%);
+}
+
+input {
+    width: 75%;
+    border: thin solid transparent;
+    background-color: hsl(210, 36%, 96%);
+    padding: 10px;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 1rem;
+    color: hsl(210, 22%, 49%);
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1rem;
+    background-color: hsl(205, 86%, 81%);
+    border: thin solid transparent;
+}
+
+#notification {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.items-with-button {
+    margin-block: 20px;
+}
+
+.single-content {
+    color: hsl(209, 61%, 16%);
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.5s linear, color 1s linear;
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    padding: 0.25rem 1rem;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 10px;
+    padding-block: 5px;
+    margin-block: 10px;
+}
+
+.single-content:hover {
+    background-color: hsl(210, 36%, 96%);
+    color: hsl(210, 22%, 49%);
+}
+
+.buttons>* {
+    padding: 5px;
+    margin: 5px;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: green;
+}
+
+form button {
+    width: 100px;
+}
+
+.clear-all {
+    color: hsl(360, 71%, 66%);
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: smaller;
+    transition: color 0.2s linear;
+    letter-spacing: 5px;
+    padding: 10px;
+}
+
+.clear-all:hover {
+    color: red;
+}
+
+button,
+i,
+.clear-all {
+    cursor: pointer;
+}
