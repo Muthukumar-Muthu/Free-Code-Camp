@@ -1,0 +1,93 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    margin: 8rem 1.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    width: 30%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.img {
+    width: 40%;
+    margin-inline-end: 2rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+
+h6 {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    line-height: 1em;
+}
+
+article>* {
+    margin: 1rem;
+}
+
+.timer {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.time {
+    background-color: yellow;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+span {
+    display: block;
+}
+
+@media (max-width: 1150px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    article,
+    .img {
+        width: 90%;
+        margin: 1rem;
+    }
+}
