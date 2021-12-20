@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(21, 92, 199);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    font-size: 67.5%;
+}
+
+body {
+    background-color: rgb(212, 229, 243);
+}
+
+.centered-grid {
+    display: grid;
+    place-items: center;
+}
+
+p {
+    text-align: center;
+}
+
+.container {
+    margin: 2rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 1rem;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+}
+
+input {
+    padding: 0.5em;
+    padding-inline-end: 0;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+input:focus {
+    border: thin solid darkblue;
+}
+
+label {
+    font-size: 2rem;
+    padding: 1em;
+    letter-spacing: 2px;
+}
+
+button {
+    all: unset;
+    font-size: 1.5rem;
+    padding: 0.475em;
+    text-transform: uppercase;
+    transition: all 0.1s linear;
+    color: rgb(4, 48, 49);
+    background-color: rgb(19, 142, 212);
+    border-radius: 1rem;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(130, 178, 206);
+    color: rgb(10, 7, 48);
+    outline: none;
+}
+
+button:active {
+    background-color: rgb(2, 57, 102);
+}
+
+form {
+    padding: 1em;
+}
+
+.paragraph {
+    font-size: 1.8rem;
+    padding: 1em;
+}
+
+p {
+    margin-block: 1em;
+}
