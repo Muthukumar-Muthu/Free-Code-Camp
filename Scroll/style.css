@@ -115,3 +115,34 @@ section {
         flex-direction: row;
     }
 }
+
+span {
+    visibility: hidden;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 40px;
+    padding: 10px;
+    background-color: chocolate;
+    animation: up-arrow 1.2s linear 0s infinite alternate;
+}
+
+span:hover {
+    color: aqua;
+}
+
+span:active {
+    background-color: burlywood;
+}
+
+@keyframes up-arrow {
+    0% {
+        font-size: 60px;
+    }
+    50% {
+        font-size: 20px;
+    }
+    100% {
+        font-size: 40px;
+    }
+}
